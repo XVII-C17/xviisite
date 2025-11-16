@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Site d'enculé</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Site d'enculé</h1>
+      <button id="nav-toggle" aria-expanded="false">Menu</button>
+      <nav id="main-nav" class="nav">
+        <ul>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="imagedefond">
+  </div>
+
+  <main>
+
+    <section id="about" class="container">
+      <h2>À propos</h2>
+      <p>Tu veux tu que jfilme ?</p>
+    </section>
+
+    <div class="cards-container">
+      <div class="Olise">
+        <img src="https://photos.tf1info.fr/images/700/700/michael-olise-france-italie-football-septembre-2024-b04a5d-0@1x.jpeg" alt="Image">
+        <h3>Michael Olise</h3>
+        <p>Numéro 17 au Bayern Munich.</p>
+      </div>
+
+      <div class="Barcola">
+        <img src="https://i.pinimg.com/736x/5a/91/37/5a9137d1915d1d2c5c3aa42c901c943a.jpg" alt="Image">
+        <h3>Bradley Barcola</h3>
+        <p>Numéro 29 au Paris Saint-Germain.</p>
+      </div>
+
+      <div class="Gattouz">
+        <img src="https://ella.janitorai.com/bot-avatars/61984bca-eb14-47b0-ace5-82673cfe86ef_b091b162-cf5d-4fe9-bede-ff2968790aa9.webp?width=300" alt="Image">
+        <h3>Gattouz</h3>
+        <p>Il tire dans l'oeil ya zebi</p>
+      </div>
+
+      <div class="MisterV">
+        <img src="https://i.pinimg.com/736x/83/fb/32/83fb329adbb09283eba89de175dd4b33.jpg?width=300" alt="Image">
+        <h3>Mister V</h3>
+        <p>Pas plus de mille Dollars hein ?</p>
+      </div>
+    
+      <a class="card-link" href="carti.html">
+        <div class="Carti" data-target="carti.html" id="carti-card">
+          <img src="https://i.pinimg.com/1200x/da/1d/63/da1d63ea2a5cc3c66b6c6b764f977c72.jpg?width=300" alt="Image">
+          <h3>Playboi Carti</h3>
+          <p>A pris 5 ans pour sortir un album</p>
+        </div>
+      </a>
+
+      <a class="card-link" href="uzi.html">
+        <div class="LilUziVert" data-target="uzi.html" id="uzi-card">
+          <img src="https://i.pinimg.com/1200x/5d/c3/53/5dc353a22cd7fa1d58cf50d192715588.jpg" alt="Image">
+          <h3>Lil Uzi Vert</h3>
+          <p>S'est implanté un diamant sur le front</p>
+        </div>
+      </a>
+
+
+    </div>
+
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <label for="name">Nom</label>
+        <input id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 — XVII</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

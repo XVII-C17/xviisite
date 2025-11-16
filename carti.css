@@ -1,0 +1,219 @@
+:root { --bg:url(backgroundsite2.jpg); --accent:#7700ff; --accent-light:#b18cff; --text:#000000; }
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Lato,sans-serif;margin:0;background:var(--bg);color:var(--text);line-height:1.5}
+.container{max-width:1000px;margin:0 auto;padding:1rem}
+.site-header{background: linear-gradient(90deg, var(--accent), var(--accent-light)); box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.site-header h1{color:#000000}
+
+.Carti {
+  width: 400px;
+  position: relative;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  border-radius: 15px;
+  overflow: hidden;
+  transform: none;
+  box-shadow: 0 5px 15px rgb(0, 0, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  margin-top: 50px;  /* on garde juste un espace vertical */
+}
+
+.Carti img {
+    width: 100%;
+    height:400px; /* hauteur fixe uniforme */
+    object-fit: cover; /* recadre l'image sans la déformer */
+    display: block;
+}
+
+.Carti h3 {
+    margin: 15px;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.Carti:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #b18cff, 0 0 60px rgba(183, 140, 255, 0.5);
+    filter: brightness(1.15);
+}
+
+/* Reflet traversant (effet "verre") */
+.Carti::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.65) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: rotate(25deg) translateX(-220%);
+  transition: transform 0.9s cubic-bezier(.2,.8,.2,1), opacity .4s;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0;
+  z-index: 2;
+}
+
+.Carti:hover::after {
+  transform: rotate(25deg) translateX(220%);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .Carti::after { display: none; }
+}
+
+.card-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.carti-section {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 2rem;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carti-text {
+  flex: 1;
+  color: #ffffff;
+}
+
+.carti-text h2 {
+  color: #b18cff;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.carti-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Media row: place GIF beside text */
+.media-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.media-gif {
+  width: 260px;
+  max-width: 40%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 5px solid #7700ff;
+}
+.media-text {
+  flex: 1;
+  min-width: 200px;
+}
+/* Place GIF to the right on desktop by ordering items */
+.media-text { order: 1; }
+.media-gif { order: 2; }
+
+@media (max-width: 700px) {
+  /* stack vertically on small screens with text first */
+  .media-row { flex-direction: column; }
+  .media-gif { max-width: 100%; width: auto; }
+}
+
+@media (max-width: 768px) {
+  .carti-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Support pour uzi.html : mêmes règles que .carti-section/.carti-text */
+.uzi-section {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 2rem;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+.uzi-text { 
+  flex: 1; 
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .uzi-section { flex-direction: column; gap: 20px; }
+}
+
+/* Hover pour LilUziVert */
+.LilUziVert:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #b18cff, 0 0 60px rgba(183,140,255,0.5);
+  filter: brightness(1.12);
+}
+
+.cartiwiki, .cartiinsta, .cartispotify, .cartideezer, .cartiyoutube {
+  width: 200px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light)); box-shadow:0 1px 3px rgba(255, 255, 255, 0.06);
+  border-radius: 15px;
+  overflow: hidden;
+  transform: none;
+  box-shadow: 0 5px 15px #7700ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 50px;  /* on garde juste un espace vertical */
+}
+.cartiwiki img, .cartiinsta img, .cartispotify img, .cartideezer img, .cartiyoutube img {
+  width: 100%;
+  height:140px; /* hauteur fixe uniforme */
+  object-fit: cover; /* recadre l'image sans la déformer */
+  display: block;
+}
+.cartiwiki h3, .cartiinsta h3, .cartispotify h3, .cartideezer h3, .cartiyoutube h3 {
+  margin: 15px;
+  font-size: 1rem;
+  color: #000000;
+}
+.cartiwiki:hover, .cartiinsta:hover, .cartispotify:hover, .cartideezer:hover, .cartiyoutube:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #7700ff;
+}
+
+.carticards-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+/* Fix taille de la carte Lil Uzi Vert quand elle est seule sur uzi.html */
+.LilUziVert {
+  width: 320px;
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.LilUziVert img {
+  width: 100%;
+  height: 300px;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+.LilUziVert h3, .LilUziVert p {
+  margin: 12px 15px;
+  color: #000000;
+}
