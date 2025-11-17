@@ -15,12 +15,19 @@ input,textarea{padding:.6rem;border:1px solid #000000;border-radius:4px}
 button[type="submit"]{background:var(--accent);color:rgb(29, 21, 32);padding:.6rem;border:none;border-radius:4px}
 .site-footer{padding:1rem;text-align:center;color:#d8d8d8;font-size:.9rem}
 
-.cards-container {
+.cards-container1, .cards-container2, .cards-container3 {
   display: flex;
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
   padding: 2rem 1rem;
+}
+
+/* forcer largeur identique dans la rangée 3 */
+.cards-container3 > * {
+  flex: 0 0 320px;   /* même largeur fixe pour chaque carte */
+  max-width: 320px;
+  box-sizing: border-box;
 }
 
 @media(max-width:700px){
@@ -29,7 +36,7 @@ button[type="submit"]{background:var(--accent);color:rgb(29, 21, 32);padding:.6r
   .nav.open{display:block}
   .nav ul{flex-direction:column;gap:.5rem}
 }
-.card, .Olise, .Gattouz, .MisterV, .Carti, .LilUziVert, .Barcola {
+.card, .Olise, .Gattouz, .MisterV, .Carti, .LilUziVert, .Barcola, .KC, .Travis {
   flex: 0 1 300px;
   max-width: 320px;
   background: linear-gradient(90deg, var(--accent), var(--accent-light));
@@ -41,24 +48,36 @@ button[type="submit"]{background:var(--accent);color:rgb(29, 21, 32);padding:.6r
   margin-top: 20px;
 }
 
-.card img, .Olise img, .Gattouz img, .MisterV img, .Carti img, .LilUziVert img, .Barcola img {
+.card img, .Olise img, .Gattouz img, .MisterV img, .Carti img, .LilUziVert img, .Barcola img, .KC img, .Travis img {
   width: 100%;
   height: 300px; /* hauteur uniforme */
   object-fit: cover; /* recadre l'image sans la déformer */
   display: block;
 }
 
-.card h3, .Olise h3, .Gattouz h3, .MisterV h3, .Carti h3, .LilUziVert h3, .Barcola h3 {
+.card h3, .Olise h3, .Gattouz h3, .MisterV h3, .Carti h3, .LilUziVert h3, .Barcola h3, .KC h3, .Travis h3 {
   margin: 15px;
   color: #000000;
 }
 
-.card p, .Olise p, .Gattouz p, .MisterV p, .Carti p, .LilUziVert p, .Barcola p {
+.card p, .Olise p, .Gattouz p, .MisterV p, .Carti p, .LilUziVert p, .Barcola p, .KC p, .Travis p {
   margin: 0 15px 15px 15px;
   color: #000000;
 }
 
-.Olise:hover, .Gattouz:hover, .MisterV:hover, .Carti:hover, .LilUziVert:hover, .Barcola:hover, .card:hover {
+.Olise:hover, .Gattouz:hover, .MisterV:hover, .Carti:hover, .LilUziVert:hover, .Barcola:hover, .card:hover, .KC:hover, .Travis:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px #7700ff;
+}
+
+h4 {
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, #b18cff, #7700ff) 1;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+h4:hover {
+  border-image: linear-gradient(90deg,  #b18cff, #ff0000) 1;
+  background: rgba(183, 140, 255, 0.1);
 }

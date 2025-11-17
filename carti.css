@@ -116,6 +116,13 @@ body{font-family:Segoe UI,Lato,sans-serif;margin:0;background:var(--bg);color:va
   border-radius: 8px;
   border: 5px solid #7700ff;
 }
+
+.media-gif:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #b18cff, 0 0 60px rgba(183, 140, 255, 0.5);
+    filter: brightness(1.15);
+}
+
 .media-text {
   flex: 1;
   min-width: 200px;
