@@ -169,7 +169,7 @@ body{font-family:Segoe UI,Lato,sans-serif;margin:0;background:var(--bg);color:va
   filter: brightness(1.12);
 }
 
-.cartiwiki, .cartiinsta, .cartispotify, .cartideezer, .cartiyoutube {
+.cartiwiki, .cartiinsta, .cartispotify, .cartideezer, .cartiyoutube, .merchsite {
   width: 200px;
   background: linear-gradient(90deg, var(--accent), var(--accent-light)); box-shadow:0 1px 3px rgba(255, 255, 255, 0.06);
   border-radius: 15px;
@@ -179,18 +179,18 @@ body{font-family:Segoe UI,Lato,sans-serif;margin:0;background:var(--bg);color:va
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: 50px;  /* on garde juste un espace vertical */
 }
-.cartiwiki img, .cartiinsta img, .cartispotify img, .cartideezer img, .cartiyoutube img {
+.cartiwiki img, .cartiinsta img, .cartispotify img, .cartideezer img, .cartiyoutube img, .merchsite img {
   width: 100%;
   height:140px; /* hauteur fixe uniforme */
   object-fit: cover; /* recadre l'image sans la déformer */
   display: block;
 }
-.cartiwiki h3, .cartiinsta h3, .cartispotify h3, .cartideezer h3, .cartiyoutube h3 {
+.cartiwiki h3, .cartiinsta h3, .cartispotify h3, .cartideezer h3, .cartiyoutube h3, .merchsite h3 {
   margin: 15px;
   font-size: 1rem;
   color: #000000;
 }
-.cartiwiki:hover, .cartiinsta:hover, .cartispotify:hover, .cartideezer:hover, .cartiyoutube:hover {
+.cartiwiki:hover, .cartiinsta:hover, .cartispotify:hover, .cartideezer:hover, .cartiyoutube:hover, .merchsite:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px #7700ff;
 }
